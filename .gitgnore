@@ -40,4 +40,4 @@ fastlane/test_output/
 
 
 # Evitar  eviar token de github
-Resources/config.plist
+GithubClient/Resources/config.plist
