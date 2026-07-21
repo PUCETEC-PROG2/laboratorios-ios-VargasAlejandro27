@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>API_TOKEN</key>
-	<string></string>
+	<string>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</string>
 	<key>API_BASE_URL</key>
-	<string>http://api.github.com</string>
+	<string>https://api.github.com</string>
 </dict>
 </plist>
