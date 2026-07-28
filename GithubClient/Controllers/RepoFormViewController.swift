@@ -20,7 +20,7 @@ class RepoFormViewController: ObservableObject {
     init(service: Githubservice = .shared) {
         self.githubService = service
     }
-    
+
     func createRepository() async {
         isLoading = true
         defer { isLoading = false }

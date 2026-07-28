@@ -22,13 +22,13 @@ struct ContentView: View {
                 .tabItem {
                     Label("Crear", systemImage: "plus.circle.fill")
                 }
-            tag(1)
+                .tag(1)
             
             Profile()
                 .tabItem {
                     Label("Perfil", systemImage: "person.crop.circle")
                 }
-            tag(2)
+                .tag(2)
         }
     }
 }

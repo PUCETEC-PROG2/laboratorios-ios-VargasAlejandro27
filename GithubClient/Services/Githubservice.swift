@@ -24,7 +24,7 @@ class Githubservice {
                 "direction": "desc",
                 "per_page": 100,
                 "affiliation": "owner",
-                "t": NSDate ().timeIntervalSince1970
+                "t": NSDate().timeIntervalSince1970
             ],
             headers: headers
         )
@@ -51,7 +51,7 @@ class Githubservice {
             encoding: JSONEncoding.default,
             headers: headers
         )
-        .validate()
+        .validate(statusCode: 200..<300)
         .serializingDecodable(Repository.self)
         .response
 
@@ -69,5 +69,16 @@ class Githubservice {
             print(error)
             throw error
         }
+    }
+    
+    func getProfile() async throws -> UserInfo {
+        return try await AF.request(
+            "\(baseUrl)/user",
+            method: .get,
+            headers: headers
+        )
+        .validate(statusCode: 200..<300)
+        .serializingDecodable(UserInfo.self)
+        .value
     }
 }
